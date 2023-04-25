@@ -3,17 +3,17 @@ from bs4 import BeautifulSoup
 import asyncio
 
 
-options = webdriver.ChromeOptions()
+options = webdriver.FirefoxOptions()
 options.add_argument('user-agent=Mozilla 5.0 (X11; Ubuntu)')
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
 #options.headless = True
 
-driver_houses = webdriver.Chrome(executable_path='root/usr/local/bin/geckodriver',
+driver_houses = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
                                   options=options)
 driver_houses.get(
     'https://rostov.cian.ru/cat.php?deal_type=sale&engine_version=2&is_by_homeowner=1&location%5B0%5D=5008&object_type%5B0%5D=1&offer_type=suburban&sort=creation_date_desc&with_neighbors=0')
-driver_flats = webdriver.Chrome(executable_path='root/usr/local/bin/geckodriver',
+driver_flats = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
                                  options=options)
 driver_flats.get(
     'https://rostov.cian.ru/cat.php?deal_type=sale&engine_version=2&is_by_homeowner=1&location%5B0%5D=5008&offer_type=flat&p=1&sort=creation_date_desc&with_neighbors=0')
