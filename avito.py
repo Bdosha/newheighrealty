@@ -8,13 +8,13 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
 # options.headless = True
 
-driver_flats = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_flats = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                 options=options)
 driver_flats.get(
     'https://www.avito.ru/taganrog/doma_dachi_kottedzhi/prodam-ASgBAgICAUSUA9AQ?cd=1&s=104&user=1')
 
 print(5)
-driver_houses = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                  options=options)
 print(6)
 driver_houses.get(

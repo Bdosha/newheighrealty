@@ -9,11 +9,11 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
 # options.headless = True
 
-driver_houses = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
     options=options)
 driver_houses.get(
     'https://dom.mirkvartir.ru/listing/?locationIds=MK_Town%7C129113&by=6&types=6&onlyUser=true')
-driver_flats = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_flats = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
     options=options)
 driver_flats.get(
     'https://www.mirkvartir.ru/listing/?locationIds=MK_Town%7C129113&by=6&onlyUser=true')

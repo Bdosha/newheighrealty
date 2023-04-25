@@ -8,11 +8,11 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
 #options.headless = True
 
-driver_houses = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                   options=options)
 driver_houses.get(
     'https://youla.ru/taganrog/nedvijimost/prodaja-doma?attributes[sort_field]=date_published&attributes[sobstvennik_ili_agent][0]=10705')
-driver_flats = webdriver.Firefox(executable_path='root/usr/local/bin/geckodriver',
+driver_flats = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                  options=options)
 driver_flats.get(
     'https://youla.ru/taganrog/nedvijimost/prodaja-kvartiri?attributes[sort_field]=date_published&attributes[sobstvennik_ili_agent][0]=10705')

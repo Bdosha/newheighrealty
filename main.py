@@ -11,7 +11,7 @@ import database
 import structure
 
 print('Hello, world')
-asyncio.sleep(10)
+asyncio.run(asyncio.sleep(10))
 
 import avito
 import ula
