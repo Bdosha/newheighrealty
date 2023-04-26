@@ -11,13 +11,14 @@ import database
 import structure
 
 print('Hello, world')
-asyncio.run(asyncio.sleep(10))
 
-#import avito
+import avito
 import ula
+print('Hello, world')
 import cian
+print('Hello, world')
 import mirkvartir
-
+print('Hello, world')
 # импорт всех библиотек для работы
 
 chat_id: int = -898776545
@@ -59,8 +60,8 @@ async def parse():
             await cian.flats_source(),
             await ula.houses_source(),
             await ula.flats_source(),
-            #await avito.houses_source(),
-            #await avito.flats_source(),
+            await avito.houses_source(),
+            await avito.flats_source(),
             await mirkvartir.houses_source(),
             await mirkvartir.flats_source()
         ]
@@ -70,15 +71,15 @@ async def parse():
             await cian.parse(temps[1]),
             await ula.parse(temps[2]),
             await ula.parse(temps[3]),
-            #await avito.parse(temps[4]),
-            #await avito.parse(temps[5]),
-            await mirkvartir.parse(temps[4]),
-            await mirkvartir.parse(temps[5])
+            await avito.parse(temps[4]),
+            await avito.parse(temps[5]),
+            await mirkvartir.parse(temps[6]),
+            await mirkvartir.parse(temps[7])
         ]
 
         notification = database.notif_users()
         print(notification)
-        for i in range(6):
+        for i in range(8):
             data = all_data[i]
             if database.new_object(data['id'], root[i // 2], data['address'], data['name'], data['url']):
                 msg_text = str(await msg_new_obj(data, i // 2))

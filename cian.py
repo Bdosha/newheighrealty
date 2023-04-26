@@ -9,7 +9,7 @@ options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 options.headless = True
-
+options.page_load_strategy = 'eager'
 driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                   options=options)
 
