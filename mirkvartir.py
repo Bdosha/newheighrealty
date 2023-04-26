@@ -1,7 +1,10 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import asyncio
+from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
+caps = DesiredCapabilities().FIREFOX
+caps["marionette"] = False
 options = webdriver.FirefoxOptions()
 options.add_argument('user-agent=Mozilla 5.0 (X11; Ubuntu)')
 options.add_argument('--disable-blink-features=AutomationControlled')
