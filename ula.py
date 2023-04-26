@@ -6,7 +6,8 @@ options = webdriver.FirefoxOptions()
 options.add_argument('user-agent=Mozilla 5.0 (X11; Ubuntu)')
 options.add_argument('--disable-blink-features=AutomationControlled')
 options.add_argument('--no-sandbox')
-#options.headless = True
+options.add_argument('--disable-dev-shm-usage')
+options.headless = True
 
 driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
                                   options=options)
