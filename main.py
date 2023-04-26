@@ -13,7 +13,7 @@ import structure
 print('Hello, world')
 asyncio.run(asyncio.sleep(10))
 
-import avito
+#import avito
 import ula
 import cian
 import mirkvartir
@@ -24,7 +24,7 @@ chat_id: int = -898776545
 admins: list = [5663715194, 1132908805]
 bot: Bot = Bot('6098152249:AAHvObNBSEzcuEDnzIeZp_wZJKCg4XvwMF4')
 dp: Dispatcher = Dispatcher()
-root = ['Циан', 'Юла', "Авито", 'Мир Квартир', 'Яндекс.Недвижимость']
+root = ['Циан', 'Юла', 'Мир Квартир', "Авито",'Яндекс.Недвижимость']
 
 parce_loop = False
 all_objects = []
@@ -59,8 +59,8 @@ async def parse():
             await cian.flats_source(),
             await ula.houses_source(),
             await ula.flats_source(),
-            await avito.houses_source(),
-            await avito.flats_source(),
+            #await avito.houses_source(),
+            #await avito.flats_source(),
             await mirkvartir.houses_source(),
             await mirkvartir.flats_source()
         ]
@@ -70,10 +70,10 @@ async def parse():
             await cian.parse(temps[1]),
             await ula.parse(temps[2]),
             await ula.parse(temps[3]),
-            await avito.parse(temps[4]),
-            await avito.parse(temps[5]),
-            await mirkvartir.parse(temps[6]),
-            await mirkvartir.parse(temps[7])
+            #await avito.parse(temps[4]),
+            #await avito.parse(temps[5]),
+            await mirkvartir.parse(temps[4]),
+            await mirkvartir.parse(temps[5])
         ]
 
         notification = database.notif_users()
