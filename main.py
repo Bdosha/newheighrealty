@@ -12,8 +12,9 @@ import structure
 
 print('Hello, world')
 
-import avito
 import ula
+print('Hello, world')
+import avito
 print('Hello, world')
 import cian
 print('Hello, world')

@@ -1,10 +1,7 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import asyncio
-from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-caps = DesiredCapabilities().FIREFOX
-caps["marionette"] = False
 options = webdriver.FirefoxOptions()
 options.add_argument('user-agent=Mozilla 5.0 (X11; Ubuntu)')
 options.add_argument('--disable-blink-features=AutomationControlled')
@@ -12,12 +9,10 @@ options.add_argument('--no-sandbox')
 options.add_argument('--disable-dev-shm-usage')
 options.headless = True
 options.page_load_strategy = 'eager'
-driver_houses = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
-                                 options=options,capabilities=caps)
+driver_houses = webdriver.Chrome(executable_path='root/test_bot/chromedriver', options=options)
 driver_houses.get(
     'https://youla.ru/taganrog/nedvijimost/prodaja-doma?attributes[sort_field]=date_published&attributes[sobstvennik_ili_agent][0]=10705')
-driver_flats = webdriver.Firefox(executable_path='/usr/local/bin/geckodriver',
-                                 options=options,capabilities=caps)
+driver_flats = webdriver.Chrome(executable_path='root/test_bot/chromedriver', options=options)
 driver_flats.get(
     'https://youla.ru/taganrog/nedvijimost/prodaja-kvartiri?attributes[sort_field]=date_published&attributes[sobstvennik_ili_agent][0]=10705')
 
