@@ -24,7 +24,7 @@ print('Hello, world')
 
 chat_id: int = -898776545
 admins: list = [5663715194, 1132908805]
-bot: Bot = Bot('6098152249:AAHvObNBSEzcuEDnzIeZp_wZJKCg4XvwMF4')
+bot: Bot = Bot('BOT_TOKEN')
 dp: Dispatcher = Dispatcher()
 root = ['Циан', 'Юла', 'Мир Квартир', "Авито",'Яндекс.Недвижимость']
 
